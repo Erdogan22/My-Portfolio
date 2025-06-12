@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="about">
+        <h1>A Propos de moi</h1>
+        <p>
+             Bonjour! Je suis un développeur web passionné avec un amour pour la création de sites Web beaux et fonctionnels. 
+            J'aime apprendre de nouvelles technologies et améliorer mes compétences tous les jours.
+        </p>
+        <p>
+            J'aime relever des défis techniques et apprendre de nouvelles technologies pour améliorer mes compétences. 
+            Mon objectif est de contribuer à des projets qui ont un impact positif et d'apporter des solutions créatives aux problèmes complexes.
+        </p>
+
+    </div>
+    <div class="slider-container">
+    <div class="slider-controls">
+        <button class="slider-btn active" data-slide="0">Compétences</button>
+        <button class="slider-btn" data-slide="1">Parcours</button>
+    </div>
+    <div class="slider-sections">
+        <section class="skills-section slider-slide active">
+            <h2>Mes Compétences</h2>
+           <ul class="skills-list">
+            <li><i class="fa-brands fa-python python-color"></i> Python</li>
+<li><i class="fa-solid fa-flask flask-color"></i> Flask</li>
+<li><i class="fa-brands fa-html5 html-color"></i> HTML &amp; <i class="fa-brands fa-css3-alt css-color"></i> CSS</li>
+<li><i class="fa-brands fa-js js-color"></i> JavaScript</li>
+<li><i class="fa-solid fa-database db-color"></i> SQL</li>
+<li><i class="fa-brands fa-git-alt git-color"></i> <i class="fa-brands fa-github github-color"></i> Git &amp; GitHub</li>
+<li><i class="fa-solid fa-mobile-screen-button mobile-color"></i> Responsive Design</li>
+        </ul>
+        </section>
+
+        <section class="skills-section slider-slide">
+            <h2>Mon Parcours</h2>
+            <ul class="skills-list">
+                <li>
+                    <strong>Licence en Informatique</strong> - Université de Technologie, 2020
+                </li>
+                <li>
+                    <strong>Master en Développement Web</strong> - École Supérieure de Technologie, 2022
+                </li>
+                <li>
+                    <strong>Certificat en Développement Full Stack</strong> - Institut de Technologie, 2023
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='jscript/script.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="about">
+    <h1>Contact</h1>
+    <p>
+        Vous souhaitez me contacter ? Remplissez le formulaire ci-dessous pour m'envoyer un message et je vous répondrai dès que possible !
+    </p>
+</div>
+<div class="contact-container">
+
+   <form method="POST" id="contact-form" action="{{ url_for('contact') }}"
+      class="animate-form contact-form">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(size=50, required=True) }}
+    </p>
+    <p>
+        {{ form.email.label }}<br>
+        {{ form.email(size=50, type="email", required=True) }}
+        <span id="email-error" class="error-message"></span>
+    </p>
+    <p>
+        {{ form.message.label }}<br>
+        {{ form.message(rows=4, cols=50, required=True) }}
+    </p>
+    {# Flashed message just below textarea #}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div id="form-message" class="{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <p>{{ form.submit() }}</p>
+</form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='jscript/script.js') }}"></script>
+{% endblock %}

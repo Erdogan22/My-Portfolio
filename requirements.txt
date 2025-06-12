@@ -1,0 +1,6 @@
+Flask
+Flask-WTF
+requests
+Flask-Mail
+Flask-SQLAlchemy
+markdown

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <img src="{{ url_for('static', filename='images/cv photo.png') }}" alt="Photo de profil" class="profile-img profile-img-wrapper ">
+    <!-- <h1 id="hero-title">Salut, je suis <span id="mon_nom">BA MAMOUDOU</span></h1> -->
+    <h1 id="hero-title">Salut, je suis <span id="mon_nom"></span></h1>
+    <p class="about">
+        J'aime relever des défis techniques et apprendre de nouvelles technologies pour améliorer mes compétences. <br>
+        Mon objectif est de contribuer à des projets qui ont un impact positif et d'apporter des solutions créatives aux problèmes complexes.
+        
+    </p>
+    <!-- <p id="typed-text">Développeur | Créatif | Curieux</p> -->
+     <p><a href="https://github.com/Erdogan22" target="_blank" aria-label="GitHub" class="social-link">
+        <i class="fab fa-github"></i> 
+    </a>
+    <a href="https:/www.linkedin.com/in/mahmoud-ba-9a5181303" target="_blank" aria-label="LinkedIn" class="social-link">
+        <i class="fab fa-linkedin"></i> 
+    </a>
+    <a href="https://twitter.com/YOUR_TWITTER_HANDLE" target="_blank" aria-label="Twitter" class="social-link">
+        <i class="fa-brands fa-x-twitter"></i>
+    <a href="mailto:mahmoudba652@gmail.com" aria-label="Email" class="social-link">
+        <i class="fas fa-envelope"></i> 
+    </a>
+    </p>
+    <a href="{{ url_for('contact') }}" class="btn">Contactez-moi
+        <span class="shine"></span>
+    </a>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='jscript/script.js') }}"></script>
+{% endblock %}

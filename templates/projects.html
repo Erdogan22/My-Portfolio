@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+ <div class="about">
+        <h1>Mes Projets GitHub</h1>
+        <p>
+            Bienvenue sur ma page de projets GitHub ! Ici, vous trouverez une sélection de mes projets récents et intéressants. 
+            Chaque projet est un exemple de mon travail en tant que développeur et reflète mes compétences en programmation et en développement web.
+            N'hésitez pas à explorer les dépôts, à consulter le code source et à me faire part de vos commentaires ou questions.
+        </p>
+    </div>
+
+<section class="skills-section">
+    <h2>Mes projets GitHub</h2>
+    <ul class="skills-list">
+        {% for repo in repos %}
+        <li><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></li>
+        {% else %}
+        <li>Aucun dépôt trouvé.</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
+<!-- {% block scripts %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %} -->

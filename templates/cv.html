@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="cv">
+        <h1>Mon Curriculum</h1>
+        <p>
+            Bienvenue sur ma page CV ! Ici, vous trouverez toutes les informations nécessaires pour en savoir plus sur mon parcours professionnel, mes compétences et mes réalisations. N'hésitez pas à parcourir mon CV pour découvrir comment je peux contribuer à votre projet ou entreprise.
+            Si vous avez des questions ou souhaitez discuter de potentielles collaborations, n'hésitez pas à me contacter via la page Contact.
+        </p>
+    </div>
+
+<iframe src="{{ url_for('static', filename='pdf/Marketing_digital_dev.pdf') }}" width="100%" height="600px"></iframe>
+{% endblock %}
+
